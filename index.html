@@ -28,6 +28,10 @@
       --rose-800: hsl(332, 51%, 32%);
       --rose-50: hsl(330, 100%, 98%);
     }
+    *{
+        padding: 0;
+        margin: 0;
+      }
     body{
       width: 100dvw;
       height: 100dvh;
@@ -49,7 +53,7 @@
      margin: 10px auto;
      border-radius: 30px;
     background-color:var(--white);
-    padding: 30px 10px 30px 30px ;
+    padding: 30px ;
     }
     img{
       width: 780px;
@@ -73,6 +77,9 @@
       font-size: 2rem;
       font-family: "outfit", sans-serif;
 
+    }
+    ul,ol{
+      padding-left: 2rem;
     }
     ul >li{
       color: var(--rose-800);
@@ -140,15 +147,48 @@ ol li:before {
       font-size: 11px;
    }
     .attribution a { color: hsl(228, 45%, 44%); }
-    @media screen {width:375px}{
-      
+    @media (max-width:375px){
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      main{
+        width:375px ;
+        margin: 0;
+     border-radius: 0;
+    padding: 0 ;
+
+    }
+    img{
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0;
+      padding: 0;
+
+    }
+    h1{
+      font-size: 2rem;
+    }
+    .main{
+      padding: 30px;
+    }
+
+        .preparation > h5,.ingredients > h5, .instructions h5, .nutrition > h5{
+          font-size: 1.5rem;
+        }
+            li{
+      margin-bottom: 10px;
+
+    }
     }
   </style>
 </head>
 <body>
   <main>
     <img src="./assets/images/image-omelette.jpeg" alt="omelette">
-    <h1>Simple Omelette Recipe</h1>
+    <div class="main">
+      <h1>Simple Omelette Recipe</h1>
     <p>
   An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
   to perfection, optionally filled with your choice of cheese, vegetables, or meats.
@@ -212,6 +252,7 @@ ol li:before {
   <div class="divider"></div>
   <p>Fat <span>22g</span> </p> 
 </div>
+    </div>
   <div class="attribution">
     <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.github.com/Fabrice000">Fabrice000</a>.</p>
